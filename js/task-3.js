@@ -11,15 +11,16 @@
 
 
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
- function ilterArray(numbers, value) {
-    let newNomber = []
-    for (let i = 0; i < numbers.length; i += 1) {
-       if (value.includes(numbers[i])) {
-        newNomber.push(numbers[i])
-       }
-    }
-    return newNomber;
- }
+function filterArray(numbers, value) {
+   let newNumber = []
+   for (let i = 0; i < numbers.length; i += 1) {
+      if (numbers[i] > value) {
+         newNumber.push(numbers[i])
+      }
+   }
+   return newNumber;
+}
+
 
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
